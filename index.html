@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 7</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+    <script src="js/calculator.js" defer></script>
+    <script src="js/slick.min.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+</head>
+<body>
+<div class="back">
+    <header>
+        <div class="container-fluid">
+            <div class="col-12 row justify-content-center align-items-center">
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <img class="logo" src="img/image2.png" alt = "Логотип">
+                Заголовок сайта
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid mt-4 d-flex flex-column" id="flag">
+
+        <div class="col-12 row justify-content-center align-items-center" style="padding: 0;">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8" style="padding-right: 0;">
+                <nav>
+                    <ul class="row">
+                        <li class="col-md-4 col-lg-4 col-xl-4 col-sm-8"><a href="#links">Список гиперссылок</a></li>
+                        <li class="col-md-4 col-lg-4 col-xl-4 col-sm-8"><a href="#table">Таблица</a></li>
+                        <li class="col-md-4 col-lg-4 col-xl-4 col-sm-8"><a href="#form">Форма</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col-12 row justify-content-center align-items-center " style="padding-right:0;">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-light">
+                <div id="links">
+                    <h1 class="text-center">Список ссылок</h1>
+                    <ol class="menu_2">
+                        <li><a href="http://cats.com" id="#flag">Абсолютная гиперссылка на главную страницу сайта</a></li>
+                        <li><a href="https://meme.com">Абсолютная на главную в протоколе https</a></li>
+                        <li><a href="ftp://ubisoft.com/games/example">Ссылка на файл на сервере FTP без авторизации</a></li>
+                        <li><a href="ftp://user:password@ubisoft.com/games/example">С авторизацией</a></li>
+                        <li>
+                            <a href="https://ru.wikipedia.org/wiki/Википедия:Внутренние_ссылки#На_что_следует_ссылаться">
+                                Ссылка на фрагмент страницы некоторого сайта
+                            </a>
+                        </li>
+                        <li><a href="#element_id">Cсылка на фрагмент текущей страницы</a></li>
+                        <li><a href="https://idroo.com/?a=0&c=1">Cсылка с двумя параметрами</a></li>
+                        <li>
+                            <ul>
+                                <li><a href="#element_id" title="О чём">Оглавление</a></li>
+                                <li><a href="#flag" title="Суть">Основной материал</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Ссылка без href</a></li>
+                        <li><a href="">Ссылка с пустым href</a></li>
+                        <li><a href="https://cats.com" rel="nofollow">Запрет перехода поисковикам</a></li>
+                        <li><a href="https://cats.com" rel="noindex">Запрещенная для индексации поисковиками</a></li>
+                        <li><p> Контекстная <a href="https://en.wikipedia.org/wiki/Rick_and_Morty" title="source">ссылка</a> в тексте абзаца
+                        </p></li>
+                        <li>
+                            <a href="https://ru.wikipedia.org/wiki/Муравьи">
+                                <img src="img/image1.jpg" width="200" height="200" alt="flower">
+                            </a>
+                        </li>
+                        <li>
+                            <img src="img/image1.jpg" alt="flower" width="200" height="200" usemap="#nav">
+                            <map name="nav">
+                                <area shape="circle" coords="75,75,50" href="https://www.youtube.com/watch?v=_5348G7LZQc" alt="круг">
+                                <area shape="rect" coords="125,125,190,190" href="https://ru.wikipedia.org/wiki/Прямоугольник" alt="прямоугольник">
+                            </map>
+                        </li>
+                        <li><a href="kek">Относительная ссылка на страницу в текущем каталоге</a></li>
+                        <li><a href="./about/lol">Относительная ссылка на страницу в каталоге about</a></li>
+                        <li><a href="../meme">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+                        <li><a href="../../peace">Относительная на страницу в каталоге двумя уровнями выше текущего</a></li>
+                        <li><a href="/">Сокращенная ссылка на главную</a></li>
+                        <li><a href="/world">Сокращенная ссылка на внутреннюю</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 row justify-content-center align-items-center " style="padding-right:0;">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-light">
+                <h1 class="text-center">Калькулятор цены одежды</h1>
+                <form>
+                    <p>Введите количество одежды: </p>
+                    <input
+                        type="text"
+                        id = "Clothes_Count"
+                        value=""
+                        placeholder="Количество одежды"
+                    >
+                    <p class="subtitle">Выберите тип одежды:</p>
+                    <select class="form__select" name="type" id="select">
+                        <option value="1" id="firstProduct">Джинсы</option>
+                        <option value="2" id="secondProduct">Обувь</option>
+                        <option value="3" id="threeProduct">Рубашки</option>
+                    </select>
+                    <div class="form__radios" id="shoes_r">
+                        <input type="radio" name="shoes_s" id="shoes_sets" />
+                        <input type="radio" name="shoes_s" value="business" /> Деловые
+                        <input type="radio" name="shoes_s" value="football" /> Футбольные
+                        <input type="radio" name="shoes_s" value="running" /> Беговые
+                    </div>
+                    <div class="form__checkboxes" id="shirt_options">
+                        <input type="checkbox" name="tie" id="tie" /> Галстук
+                        <input type="checkbox" name="cufflinks" id="cufflinks" /> Запонки
+                    </div>
+                    <br/>
+                </form>
+                <p id="price" class="start-price"></p>
+            </div>
+        </div>
+
+        <div class="col-12 row justify-content-center align-items-center " style="padding-right:0;">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-light">
+                <h1 class = "text-center" id="gallery">Галерея</h1>
+                    <div class="slider">
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/jeans1.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/jeans2.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shoes1.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shoes2.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shoes_b1.jpg" alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shoes_b2.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shoes_f1.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shoes_f2.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shoes_r1.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shoes_r2.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shirt1.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/shirt2.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/tie1.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/tie2.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/cufflinks1.jpg"  alt="">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src ="img/cufflinks2.jpg"  alt="">
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-12 row justify-content-center align-items-center order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1" style="padding-right:0;">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-light">
+                <h1 class="text-center">Таблица</h1>
+                    <table id="table" class="table table-striped table-bordered">
+                        <tbody>
+                        <tr class="even">
+                            <th colspan="3" class="text-center">Заголовок таблицы</th>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 1</td>
+                            <td>Ячейка 2</td>
+                            <td>Ячейка 3</td>
+                        </tr>
+                        <tr class="even">
+                            <td>Ячейка 4</td>
+                            <td>Ячейка 5</td>
+                            <td>Ячейка 6</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 7</td>
+                            <td>Ячейка 8</td>
+                            <td>Ячейка 9</td>
+                        </tr>
+                        <tr class="even">
+                            <td>Ячейка 10</td>
+                            <td>Ячейка 11</td>
+                            <td>Ячейка 12</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 13</td>
+                            <td>Ячейка 14</td>
+                            <td>Ячейка 15</td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-12 row justify-content-center align-items-center order-1 order-sm-1 order-md-2 order-lg-2 order-xl-2 mb-4" style="padding-right:0;">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-light">
+                <div id="form">
+                    <h1 class="text-center">Форма</h1>
+                    <form method="post">
+                        <div class="form-group">
+                            <label>Имя:<br>
+                                <input name="field-name" class="form-control" value="" placeholder="Имя">
+                            </label><br><br>
+
+                            <label>
+                                Ваш email:<br>
+                                <input name="field-email" value="" class="form-control" placeholder="test@example.com" type="email">
+                            </label><br><br>
+
+                            <label>
+                                Дата рождения:<br>
+                                <input name="field-date" class="form-control" value="" type="date">
+                            </label><br><br>
+
+                            Пол:<br>
+                            <label><input type="radio" name="my_radio1" value="Мужской">Мужской</label>
+                            <label><input type="radio" name="my_radio1" value="Женский">Женский</label><br><br>
+
+                            Количество конечностей:<br>
+                            <label><input type="radio" name="my_radio" value="1">1</label>
+                            <label><input type="radio" name="my_radio" value="2">2</label>
+                            <label><input type="radio" name="my_radio" value="3">3</label>
+                            <label><input type="radio" name="my_radio" value="4">4</label><br><br>
+
+                            <label>
+                                Сверхспособности:<br>
+                                <select name="field-name-4" multiple="multiple" class="form-control">
+                                    <option value="Бессмертие">Бессмертие</option>
+                                    <option value="Прохождение сквозь стены">Прохождение сквозь стены</option>
+                                    <option value="Левитация">Левитация</option>
+                                </select>
+                            </label><br><br>
+
+                            <label>
+                                Биография:<br>
+                                <textarea name="field-name-2" class="form-control" placeholder="Напишите о себе..."></textarea>
+                            </label><br><br>
+
+                            <label><input type="checkbox" name="check-1">С контрактом ознакомлен</label><br>
+
+                            <input type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer__copy d-flex justify-content-center">
+    &copy; Олехов Даниил 2021
+</footer>
+
+</body>
+</html>
