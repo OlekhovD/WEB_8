@@ -2,11 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 7</title>
+    <title>Задание 8</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/form.js" defer></script>
     <script src="js/calculator.js" defer></script>
     <script src="js/slick.min.js" defer></script>
     <script src="js/gallery.js" defer></script>
@@ -25,14 +27,13 @@
     </header>
 
     <div class="container-fluid mt-4 d-flex flex-column" id="flag">
-
         <div class="col-12 row justify-content-center align-items-center" style="padding: 0;">
             <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8" style="padding-right: 0;">
                 <nav>
                     <ul class="row">
                         <li class="col-md-4 col-lg-4 col-xl-4 col-sm-8"><a href="#links">Список гиперссылок</a></li>
                         <li class="col-md-4 col-lg-4 col-xl-4 col-sm-8"><a href="#table">Таблица</a></li>
-                        <li class="col-md-4 col-lg-4 col-xl-4 col-sm-8"><a href="#form">Форма</a></li>
+                        <li class="col-md-4 col-lg-4 col-xl-4 col-sm-8"><a href="#popup">Обратная связь</a></li>
                     </ul>
                 </nav>
             </div>
@@ -265,6 +266,42 @@
                             <input type="submit" value="Отправить">
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 row justify-content-center align-items-center " style="padding-right:0;">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-light">
+            <div id="popup" class="popup">
+                <div class="popup_body">
+                    <div class="popup_content">
+                        <div class="form">
+                            <form class="ajaxForm" action="https://formcarry.com/s/a4nsVGvnu53" method="POST" accept-charset="UTF-8" id="form">
+                                <a href="#" class="popup_close">X</a>
+                                <h1 class="form_title">Отправка данных на почту</h1>
+                                <div class="form_item">
+                                    <label for="formName" class="form_label">Имя*:</label>
+                                    <input id="formName" type="text" name="name" class="form_input_req" required>
+                                </div>
+                                <div class="form_item">
+                                    <label for="formEmail" class="form_label">E-mail*:</label>
+                                    <input id="formEmail" type="text" name="email" class="form_input_req_email" required>
+                                </div>
+                                <div class="form_item">
+                                    <label for="formMessage" class="form_label">Сообщение:</label>
+                                    <textarea name="message" id="formMessage" class="form_input"></textarea>
+                                </div>
+                                <div class="form_item">
+                                    <div class="checkbox">
+                                        <input id="formAgreement" type="checkbox" name="agreement" class="checkbox_input_req" required>
+                                        <label for="formAgreement" class="checkbox_label"><span>Я даю своё согласие на обработку персональных данных</span></label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="form_button">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
